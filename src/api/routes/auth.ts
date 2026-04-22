@@ -22,8 +22,8 @@ export default (app: Router) => {
     }),
     async (req: Request, res: Response, next: NextFunction) => {
       const logger:Logger = Container.get('logger');
-      logger.debug('Calling Sign-Up endpoint with bodybranchhhhhhhhhhhhhh: %o', req.body );
-      try {
+      logger.debug('Calling Sign-Up endpoint with bodybranch11111111111111: %o', req.body );
+         try {
         const authServiceInstance = Container.get(AuthService);
         const { user, token } = await authServiceInstance.SignUp(req.body as IUserInputDTO);
         return res.status(201).json({ user, token });
