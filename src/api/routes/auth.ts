@@ -22,7 +22,8 @@ export default (app: Router) => {
     }),
     async (req: Request, res: Response, next: NextFunction) => {
       const logger:Logger = Container.get('logger');
-      logger.debug('Calling Sign-Up endpoint with bodybranch moved to main22222222222222: %o', req.body );
+
+      logger.debug('Calling Sign-Up endpoint with bodybranch moved to main22222222222222 Branch: %o', req.body );
          try {
         const authServiceInstance = Container.get(AuthService);
         const { user, token } = await authServiceInstance.SignUp(req.body as IUserInputDTO);
